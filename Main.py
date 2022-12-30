@@ -3,6 +3,7 @@ from BD import Carros
 app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
 
+
 @app.route('/carros', methods=['GET'])
 def get_carros():
     return make_response(
@@ -23,5 +24,6 @@ def create_carro():
             Carro_cadastrado=carro
         )
     )
+
 
 app.run()
